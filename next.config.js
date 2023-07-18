@@ -4,6 +4,14 @@ const LOCATION_COOKIE = 'kibo_purchase_location'
 const DEFAULT_WISHLIST_NAME = 'default-wishlist'
 
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://t100097-s100210.sb.euw1.kibocommerce.com',
+      },
+    ]
+  },
   reactStrictMode: false,
   compiler: {
     // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
